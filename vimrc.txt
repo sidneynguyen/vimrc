@@ -63,6 +63,6 @@ function HtmlTemplate()
 endfunction
 nnoremap ,html :execute HtmlTemplate()<CR>3jf>a
 
-inoremap { {}<ESC>i
-inoremap ( ()<ESC>i
-inoremap < <><ESC>i
+inoremap { {<Enter>}<Esc>O
+inoremap ( ()
+inoremap < <><Esc>i
