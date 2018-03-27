@@ -65,4 +65,8 @@ nnoremap ,html :execute HtmlTemplate()<CR>3jf>a
 
 inoremap { {<Enter>}<Esc>O
 inoremap ( ()
-inoremap < <><Esc>i
+iabbrev </ </<C-X><C-O>
+
+inoremap <C-_> <Esc>A
+inoremap <C-B> <Esc>i
+
