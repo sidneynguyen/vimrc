@@ -1,0 +1,64 @@
+""""""""""""""""""""""""""""""""
+" Author:
+"       Sidney Nguyen
+" Date:
+"       27 March 2018
+" Description:
+"       Vim configuration file
+""""""""""""""""""""""""""""""""
+
+set nocompatible
+set background=dark
+
+set autoread
+set encoding=utf8
+set fileformats=unix,dos,mac
+set mouse=a
+set path+=**
+set splitright
+set wildmenu
+
+set number relativenumber
+set ruler
+set showmatch
+
+set nowrap
+set whichwrap+=<,>,h,l
+
+set ignorecase
+set incsearch
+set smartcase
+
+set autoindent
+set backspace=indent,eol,start
+set smartindent
+
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+
+autocmd BufRead,BufNewFile Makefile set noexpandtab
+autocmd BufRead,BufNewFile Makefile set nosmarttab
+autocmd BufRead,BufNewFile Makefile set shiftwidth=8
+autocmd BufRead,BufNewFile Makefile set tabstop=8
+
+syntax enable
+filetype plugin on
+
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+
+function HtmlTemplate()
+	let html=line(".")
+	call setline(html, "<!DOCTYPE html>")
+	call append (html, "<html>")
+	call append (html+1, "<head>")
+	call append (html+2, "    <title></title>")
+	call append (html+3, "</head>")
+	call append (html+4, "<body>")
+	call append (html+5, "</body>")
+	call append (html+6, "</html>")
+	unlet html
+endfunction
+nnoremap ,html :execute HtmlTemplate()<CR>3jf>a
