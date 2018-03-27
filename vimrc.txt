@@ -62,3 +62,7 @@ function HtmlTemplate()
 	unlet html
 endfunction
 nnoremap ,html :execute HtmlTemplate()<CR>3jf>a
+
+inoremap { {}<ESC>i
+inoremap ( ()<ESC>i
+inoremap < <><ESC>i
