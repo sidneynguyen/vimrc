@@ -13,17 +13,15 @@ set background=dark
 set autoread
 set encoding=utf8
 set fileformats=unix,dos,mac
-set mouse=a
 set path+=**
 set splitright
 set wildmenu
 
-set number relativenumber
+set number
 set ruler
 set showmatch
 
 set nowrap
-set whichwrap+=<,>,h,l
 
 set ignorecase
 set incsearch
